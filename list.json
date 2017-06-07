@@ -311,12 +311,14 @@
     {
       "firstname": "François",
       "lastname": "Bois",
-      "password": "hgsfa93g"
+      "password": "hgsfa93g",
+      "admin" : "true"
     },
     {
       "firstname": "Ghislaine",
       "lastname": "Esnault",
-      "password": "aijeu8hp"
+      "password": "aijeu8hp",
+      "admin" : "true"
     }
   ]
 }
