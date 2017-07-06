@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <title>Exos JSON, AJAX, JS</title>
+  </head>
+  <body>
+    <h1>JSON</h1>
+     <p>
+       <button id="json" name="button">Afficher mon JSON</button>
+        <ul id="place">
+        </ul>
+         <script>
+          $(function() {
+           $.getJSON('list.json', function(list) {
+            $.each(list.books, function(key, value)  {
+             $('#place').append('<p>Titre :' + value.title + '</p><p>Auteur :' + value.author + '</p><img src=' + value.cover+ ' width="100px"><p>Genre :' + value.genre +'</p><hr>');
+              $('#place').hide()
+              });
+             });
+            });
+             $('#json').click(function() {
+               $('#place').toggle(500);
+              });
+         </script>
+        </p>
+      <button type="button" name="button"><a href="page1.php">Page1</a></button>
+  </body>
+</html>
